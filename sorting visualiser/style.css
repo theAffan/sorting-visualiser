@@ -66,4 +66,14 @@ body{
     font-size: 23px;
     font-weight: bold;
 }
-
+#drawing_area{
+    display:flex;
+    height:500px;
+    width:100%;
+    border:black solid 2px;
+}
+.array_elements{
+    background-color: aquamarine ;
+    padding:1px;
+    border:black solid 2px;
+}
