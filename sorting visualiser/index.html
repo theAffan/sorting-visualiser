@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="merge_sort.js"></script>
+    <!-- <script src="merge_sort.js"></script> -->
 </head>
 <body>
     <form>
@@ -18,10 +18,13 @@
             <p id="title_proj">SORTING VISUALIZER</p>
         </div>
         <div class="all_buttons">
-            <button class="btn" id="insertion_sort_btn">Insertion Sort</button>
-            <button class="btn" id="selection_sort_btn">Selection Sort</button>
-            <button class="btn" id="merge_sort_btn" onclick="mergeSort()">Merge Sort</button>
-            <button class="btn" id="bubble_sort_btn">Bubble Sort</button>
+            <button type = "button" class="btn" id="rand_button" onclick = "test()">Randomize</button>
+            <button type = "button" class="btn" id="selection_sort_btn" onclick = "selection_sort()">Selection Sort</button>
+            <button type = "button" class="btn" id="merge_sort_btn" onclick="mergeSort()">Merge Sort</button>
+            <button type = "button" class="btn" id="bubble_sort_btn" onclick= "bubble_sort()">Bubble Sort</button>
+        </div>
+        <div id = "drawing_area">
+
         </div>
     </div>
     <div class="tech_used">
@@ -33,5 +36,8 @@
         <p class="para">A WEB PROJECT ILLUSTRATING THE WORKING AND FUNCTIONING OF VARIOUS SORTING ALGORITHMS USING HTML CSS & JAVASCRIPT</p>
     </div>
 </form>
+<script src = "js/randomizing_array.js"></script>
+<script src = "js/bubble_sort.js"></script>
+<script src = "js/selection_sort.js"></script>
 </body>
 </html>
