@@ -1,13 +1,13 @@
 var arrayGlobal = [];
 function test() {
-
+    let canvas = document.getElementById("drawing_area");
+    const width = window.getComputedStyle(canvas).getPropertyValue("width");
     let list = [];
-    for (var i = 0; i < 50; i++) {
+    for (var i = 0; i < parseInt(width.slice(0,width.length-2))/20; i++) {
         list.push(Math.floor(Math.random() * 85));
     }
-console.log(list);
+    console.log(list);
     arrayGlobal = list;
-    let canvas = document.getElementById("drawing_area");
     const height = canvas.offsetHeight;
 
     //clear canvas if already alloted arrays are present
