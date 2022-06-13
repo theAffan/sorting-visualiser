@@ -1,5 +1,9 @@
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.9em;
 }
 .container{
     border: 7px dashed black;
@@ -20,13 +24,13 @@ body{
 }
 
 .all_buttons {
-    margin: 10% auto;
+    margin: 3% auto;
     align-items: center;
     text-align: center;
     justify-content: center;
 }
 
-.btn {
+.btn,.btn1{
     margin: 16px;
     padding: 12px;
     background: transparent;
@@ -74,6 +78,13 @@ body{
 }
 .array_elements{
     background-color: aquamarine ;
-    padding:1px;
+    width:20px;
     border:black solid 2px;
+}
+.tech_used{
+    display: inline-block;
+}
+.footer{
+    display:inline-block;
+/* rti>>>>>>> Stashed changes:song visualiser/style.css */
 }

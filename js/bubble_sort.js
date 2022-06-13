@@ -1,5 +1,5 @@
 value = true;
-document.getElementById("rand_button").addEventListener('click',callback);
+document.getElementById("rand_button").addEventListener('click', callback);
 async function swap(elem1, elem2, isLast) {
     divElem1 = document.getElementById(elem1);
     divElem2 = document.getElementById(elem2);
@@ -31,7 +31,7 @@ async function swap(elem1, elem2, isLast) {
         divElem2.style.backgroundColor = "green";
     }
 
-    return await new Promise((resolve) => {
+    return new Promise((resolve) => {
         setTimeout(() => {
             resolve();
         }, 150);
@@ -40,20 +40,29 @@ async function swap(elem1, elem2, isLast) {
 }
 
 async function bubble_sort() {
+    document.getElementById("bubble_sort_btn").onclick = "";
+    document.getElementById("selection_sort_btn").onclick = "";
     value = true;
     list = arrayGlobal;
-    
+
     for (let i = 0; i < list.length; i++) {
         for (let j = 0; j < list.length - i - 1; j++) {
             if (list[j] > list[j + 1]) {
                 await swap(j, j + 1, j + 1 == list.length - i - 1 ? true : false);
             }
-            
-            if(value == false) return;
-        }document.querySelector('#drawing_area div:nth-of-type(' + (list.length-i) + ')').style.backgroundColor = "green";
+
+            if (value == false) {
+                document.getElementById("bubble_sort_btn").onclick = bubble_sort;
+                document.getElementById("selection_sort_btn").onclick = selection_sort;
+                return;
+            }
+        } document.querySelector('#drawing_area div:nth-of-type(' + (list.length - i) + ')').style.backgroundColor = "green";
     }
     console.log(list);
+    document.getElementById("selection_sort_btn").onclick = selection_sort;
+    document.getElementById("bubble_sort_btn").onclick = bubble_sort;
 }
-function callback(){
+function callback() {
+    
     value = false;
 }
