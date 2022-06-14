@@ -6,7 +6,6 @@ function test() {
     for (var i = 0; i < parseInt(width.slice(0,width.length-2))/20; i++) {
         list.push(Math.floor(Math.random() * 85));
     }
-    console.log(list);
     arrayGlobal = list;
     const height = canvas.offsetHeight;
 
@@ -26,5 +25,4 @@ function test() {
         canvas.appendChild(div);
 
     }
-    console.log(arrayGlobal);
 }
