@@ -14,6 +14,11 @@ async function merge_sort() {
     list = arrayGlobal;
     list = await rec_merge_sort(list, 0, list.length);
     console.log(list);
+    
+    
+    document.getElementById("selection_sort_btn").onclick = selection_sort;
+    document.getElementById("bubble_sort_btn").onclick = bubble_sort;
+    document.getElementById("merge_sort_btn").onclick = merge_sort;
 }
 
 //merge sort splitter function, sorts array in place
@@ -68,10 +73,6 @@ async function rec_merge_sort(listarg, start, end) {
         document.getElementById("merge_sort_btn").onclick = merge_sort;
         return;
     }
-    
-    document.getElementById("selection_sort_btn").onclick = selection_sort;
-    document.getElementById("bubble_sort_btn").onclick = bubble_sort;
-    document.getElementById("merge_sort_btn").onclick = merge_sort;
 }
 async function merge(list, start, mid, end) {
     let i = start;
