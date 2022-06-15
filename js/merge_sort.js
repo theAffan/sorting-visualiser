@@ -12,16 +12,17 @@ async function merge_sort() {
     document.getElementById("merge_sort_btn").onclick = "";
 
     list = arrayGlobal;
-    list = await rec_merge_sort(list, 0, list.length);
+    await rec_merge_sort(list, 0, list.length);
     console.log(list);
     
     
     document.getElementById("selection_sort_btn").onclick = selection_sort;
     document.getElementById("bubble_sort_btn").onclick = bubble_sort;
     document.getElementById("merge_sort_btn").onclick = merge_sort;
-
+    
+    //color change to green portrays completion of sorting algorithm
+    await myDelay();
     for (let i = 0; i < list.length-1; i++) {
-        //resets color to aquamarine(initial) as we enter the function 
         document.querySelector('#drawing_area div:nth-of-type(' + (i + 1) + ')').style.backgroundColor = "green";
     }
 
