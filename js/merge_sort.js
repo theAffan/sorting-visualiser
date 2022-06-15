@@ -19,6 +19,12 @@ async function merge_sort() {
     document.getElementById("selection_sort_btn").onclick = selection_sort;
     document.getElementById("bubble_sort_btn").onclick = bubble_sort;
     document.getElementById("merge_sort_btn").onclick = merge_sort;
+
+    for (let i = 0; i < list.length-1; i++) {
+        //resets color to aquamarine(initial) as we enter the function 
+        document.querySelector('#drawing_area div:nth-of-type(' + (i + 1) + ')').style.backgroundColor = "green";
+    }
+
 }
 
 //merge sort splitter function, sorts array in place
