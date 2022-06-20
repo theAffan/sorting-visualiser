@@ -6,6 +6,9 @@ async function quick_sort() {
     }
     await quick_sort_start(list, 0, list.length - 1);
     console.log(list);
+    for(let i = 0;i < list.length;i++){
+        getDiv(i,"green");
+    }
 }
 async function quick_sort_start(list, low, high) {
     if (low >= high) {
