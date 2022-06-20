@@ -50,7 +50,7 @@ async function selection_sort() {
             }
             document.querySelector('#drawing_area div:nth-of-type(' + (j + 1) + ')').style.backgroundColor = "aquamarine";
         }
-        await swap(i, min);
+        await swap2(i, min);
         document.querySelector('#drawing_area div:nth-of-type(' + (i + 1) + ')').style.backgroundColor = "green";
     }
     console.log(list);
